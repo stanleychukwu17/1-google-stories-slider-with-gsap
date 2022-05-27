@@ -1,3 +1,4 @@
+import { TopBar } from '../tobar/TopBar';
 import './app.scss';
 // import background from '../../images/background.jpg'
 // import { useState } from 'react';
@@ -6,7 +7,9 @@ import './app.scss';
 const App = () => {
 
     return (
-        <div>Hi</div>
+        <div className='AppMain'>
+            <TopBar />
+        </div>
     )
 }
 

@@ -1,0 +1,15 @@
+@use '../../styles/util/' as u1;
+
+.TopBar {
+    display: flex;
+    align-items: center;
+    padding: u1.rem(10) u1.rem(15);
+    color: #051a7d;
+
+    &__name {
+        margin-left: 20px;
+        font-size: u1.rem(65);
+        font-weight: 600;
+        border-bottom: 1px solid #89f0cc;
+    }
+}
