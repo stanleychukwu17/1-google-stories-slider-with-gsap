@@ -12,4 +12,14 @@
         font-weight: 600;
         border-bottom: 1px solid #89f0cc;
     }
+
+    .TopBar__links {
+        font-size: 14px;
+        display: flex; position: relative;
+        padding: u1.rem(10) 0;
+
+        & > div {
+           margin: 0 u1.rem(15);
+        }
+    }
 }
