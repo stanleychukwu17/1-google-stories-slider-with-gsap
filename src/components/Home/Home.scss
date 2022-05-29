@@ -1,0 +1,39 @@
+@use '../../styles/util/' as u1;
+
+$text_color: #051a7d;
+.HomeP {
+    margin: u1.rem(60) 0 0;
+    text-align: center;
+    font-size: u1.rem(55);
+    color: $text_color;
+
+    button {
+        position: relative;
+        padding: u1.rem(20) u1.rem(38);
+        margin: u1.rem(35) u1.rem(35) u1.rem(100);
+        font-size: u1.rem(18);
+        cursor: pointer;
+        border: 0;
+        color: $text_color;
+        font-weight: bold;
+        border-radius: 50px;
+        background: linear-gradient(145deg, #dddde1, #ffffff);
+        box-shadow:  20px 20px 60px #d0d1d5,
+                     -20px -20px 60px #ffffff;
+        transition: all .5s ease-out;
+
+        a {
+            text-decoration: none;
+            color: currentColor;
+        }
+
+        &:hover {
+            font-size: u1.rem(19);
+            background: linear-gradient(145deg, lighten(#dddde1, 5), lighten(#dddde1, 7));
+        }
+
+        &:active {
+            top: 2px;
+        }
+    }
+}
