@@ -20,6 +20,10 @@
 
         & > div {
            margin: 0 u1.rem(15);
+
+           a {
+               color: currentColor;
+           }
         }
     }
 }

@@ -1,4 +1,6 @@
 @use 'sass:math';
+@use 'colors' as color_pack;
+
 
 // converts numbers from pixels to rem
 // inside the function, we want to make sure that the argument received does not have any units such as px, rem, em e.t.c
@@ -27,5 +29,36 @@
     position: relative;
     @if ($hidden == yes) {
         overflow: hidden;
+    }
+};
+
+// margin: rem(35) rem(35) rem(100);
+
+@mixin neo_button() {
+    position: relative;
+    padding: rem(20) rem(38);
+    font-size: rem(18);
+    cursor: pointer;
+    border: 0;
+    color: color_pack.$text_color;
+    font-weight: bold;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #dddde1, #ffffff);
+    box-shadow:  20px 20px 60px #d0d1d5,
+                 -20px -20px 60px #ffffff;
+    // transition: all .5s ease-out;
+
+    a {
+        text-decoration: none;
+        color: currentColor;
+    }
+
+    &:hover {
+        font-size: rem(18.5);
+        background: linear-gradient(145deg, lighten(#dddde1, 5), lighten(#dddde1, 7));
+    }
+
+    &:active {
+        top: 2px;
     }
 };

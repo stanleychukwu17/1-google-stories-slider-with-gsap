@@ -13,8 +13,8 @@ export const TopBar = () => {
           <div>Pizzarous!</div>
           <div className="TopBar__links">
             <div><Link to="/home">home</Link></div>
-            <div><Link to="/toppings">toppings</Link></div>
             <div><Link to="/base">base</Link></div>
+            <div><Link to="/toppings">toppings</Link></div>
             <div><Link to="/order">order</Link></div>
           </div>
         </div>
