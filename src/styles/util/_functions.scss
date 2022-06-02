@@ -37,10 +37,10 @@
 @mixin neo_button() {
     position: relative;
     padding: rem(20) rem(38);
-    font-size: rem(18);
     cursor: pointer;
     border: 0;
     color: color_pack.$text_color;
+    font-size: rem(30);
     font-weight: bold;
     border-radius: 50px;
     background: linear-gradient(145deg, #dddde1, #ffffff);
@@ -48,17 +48,21 @@
                  -20px -20px 60px #ffffff;
     // transition: all .5s ease-out;
 
+
     a {
         text-decoration: none;
         color: currentColor;
+        // -webkit-text-fill-color: white;
+        // -webkit-text-stroke-width: 1px;
+        // -webkit-text-stroke-color: #000;
     }
 
     &:hover {
-        font-size: rem(18.5);
+        top: -1px;
         background: linear-gradient(145deg, lighten(#dddde1, 5), lighten(#dddde1, 7));
     }
 
     &:active {
-        top: 2px;
+        top: 1px;
     }
 };

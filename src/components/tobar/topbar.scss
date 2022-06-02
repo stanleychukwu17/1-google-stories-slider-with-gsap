@@ -10,16 +10,16 @@
         margin-left: 20px;
         font-size: u1.rem(65);
         font-weight: 600;
-        border-bottom: 1px solid #89f0cc;
+
     }
 
     .TopBar__links {
-        font-size: 14px;
         display: flex; position: relative;
-        padding: u1.rem(10) 0;
+        font-size: 14px;
+        // display: none;
 
         & > div {
-           margin: 0 u1.rem(15);
+           margin: 0 u1.rem(30) 0 u1.rem(5);
 
            a {
                color: currentColor;

@@ -8,3 +8,13 @@ body {
 .AppMain {
     @include u1.block_display();
 }
+.App_itmCvr {
+    display: flex;
+
+    .App_1st {
+        width: 70%;
+    }
+    .App_2nd {
+        width: 30%;
+    }
+}

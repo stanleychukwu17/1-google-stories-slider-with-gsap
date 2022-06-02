@@ -18,14 +18,19 @@ const App = () => {
             <Provider store={store}>
                 <div className='AppMain'>
                     <TopBar />
-                    <div>
-                        <Routes>
-                            <Route path='home' element={<Home />} />
-                            <Route path='toppings' element={<Toppings />} />
-                            <Route path='base' element={<Base />} />
-                            <Route path='order' element={<Order />} />
-                            <Route path='/' element={<Home />} />
-                        </Routes>
+                    <div className="App_itmCvr">
+                        <div className='App_1st'>
+                            <Routes>
+                                <Route path='home' element={<Home />} />
+                                <Route path='toppings' element={<Toppings />} />
+                                <Route path='base' element={<Base />} />
+                                <Route path='order' element={<Order />} />
+                                <Route path='/' element={<Home />} />
+                            </Routes>
+                        </div>
+                        <div className='App_2nd'>
+                            This is for the brother man!
+                        </div>
                     </div>
                 </div>
             </Provider>
