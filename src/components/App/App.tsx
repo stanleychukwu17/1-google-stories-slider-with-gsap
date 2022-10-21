@@ -6,7 +6,7 @@ import './app.scss';
 
 
 // importing of all assets
-// import phone from '../../assets/svg/p1.svg'
+import phone from '../../assets/phone.png'
 
 const App = () => {
 
@@ -19,7 +19,7 @@ const App = () => {
             <div className="AppMid_1">
                 <div className="AppMgo"></div>
                 <div className="AppMgo"></div>
-                <div className='AppMgo boy'></div>
+                <div className='AppMgo boy'><img src={phone} alt="" /></div>
                 <div className="AppMgo"></div>
                 <div className="AppMgo"></div>
             </div>
