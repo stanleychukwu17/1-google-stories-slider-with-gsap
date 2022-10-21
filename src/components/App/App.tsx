@@ -7,6 +7,10 @@ import './app.scss';
 
 // importing of all assets
 import phone from '../../assets/phone.png'
+import p1 from '../../assets/p1.png'
+import p2 from '../../assets/p2.png'
+import p3 from '../../assets/p3.png'
+import p4 from '../../assets/p4.png'
 
 const App = () => {
 
@@ -17,11 +21,19 @@ const App = () => {
                 <p>Meet the new iPhone 14 pro</p>
             </div>
             <div className="AppMid_1">
-                <div className="AppMgo"></div>
-                <div className="AppMgo"></div>
+                <div className="AppMgo">
+                    <div className="AppMOimg"><img src={p1} alt="" /></div>
+                </div>
+                <div className="AppMgo">
+                    <div className="AppMOimg"><img src={p2} alt="" /></div>
+                </div>
                 <div className='AppMgo boy'><img src={phone} alt="" /></div>
-                <div className="AppMgo"></div>
-                <div className="AppMgo"></div>
+                <div className="AppMgo">
+                    <div className="AppMOimg"><img src={p3} alt="" /></div>
+                </div>
+                <div className="AppMgo">
+                    <div className="AppMOimg"><img src={p4} alt="" /></div>
+                </div>
             </div>
             <div className="">
                 
