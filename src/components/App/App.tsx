@@ -23,19 +23,19 @@ const App = () => {
                 <motion.p variants={t2Variant} initial="initial" animate="animate">Meet the new iPhone 14 pro</motion.p>
             </div>
             <motion.div className="AppMid_1" variants={mainCardsVariant} initial="initial" animate="animate">
-                <motion.div className="AppMgo" variants={smallCardsVariant} custom={1}>
+                <motion.div className="AppMgo" variants={smallCardsVariant} custom={2}>
                     <div className="AppMOimg"><img src={p1} alt="" /></div>
                 </motion.div>
-                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={3}>
+                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={4}>
                     <div className="AppMOimg"><img src={p2} alt="" /></div>
                 </motion.div>
-                <motion.div className='AppMgo boy'>
+                <motion.div className='AppMgo boy' variants={smallCardsVariant} custom={0}>
                     <img src={phone} alt="" />
                 </motion.div>
-                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={2}>
+                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={3}>
                     <div className="AppMOimg"><img src={p3} alt="" /></div>
                 </motion.div>
-                <motion.div className="AppMgo" variants={smallCardsVariant} custom={0}>
+                <motion.div className="AppMgo" variants={smallCardsVariant} custom={5}>
                     <div className="AppMOimg"><img src={p4} alt="" /></div>
                 </motion.div>
             </motion.div>

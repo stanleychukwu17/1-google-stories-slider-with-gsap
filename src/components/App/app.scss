@@ -11,7 +11,7 @@
 
     .AppTitle {
         text-align: center;
-        margin: calc(10vh) 0 0;
+        margin: calc(4vh) 0 0;
         font-weight: bold;
 
         p {
@@ -45,7 +45,11 @@
             &:not(.boy) {
                 background: linear-gradient(140deg, #F5F7FA 0%, lighten(#B8C6DB, 10) 100%);
                 border: 1px solid lighten(#B8C6DB, 20);
-                // background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+                margin-top: 80px;
+
+                &.Mg2 {
+                    margin-top: 180px;
+                }
             }
 
             .AppMOimg {
