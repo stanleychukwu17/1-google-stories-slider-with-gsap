@@ -2,13 +2,14 @@ import './app.scss';
 import { motion } from 'framer-motion';
 // import { gsap } from 'gsap';
 
-// import MiddlePhone from '../../components/App/md/MiddlePhone'
+// importation of supporting components
+import Phone from './Phone';
 
-// importing of variants for our animation
+
+// importing of framer motion variants for our animation
 import { t1Variant, t2Variant, mainCardsVariant, smallCardsVariant } from './appVariants';
 
 // importing of all assets
-import phone from '../../assets/phone.png'
 import p1 from '../../assets/p1.png'
 import p2 from '../../assets/p2.png'
 import p3 from '../../assets/p3.png'
@@ -29,9 +30,7 @@ const App = () => {
                 <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={4}>
                     <div className="AppMOimg"><img src={p2} alt="" /></div>
                 </motion.div>
-                <motion.div className='AppMgo boy' variants={smallCardsVariant} custom={0}>
-                    <img src={phone} alt="" />
-                </motion.div>
+                <Phone />
                 <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={3}>
                     <div className="AppMOimg"><img src={p3} alt="" /></div>
                 </motion.div>
