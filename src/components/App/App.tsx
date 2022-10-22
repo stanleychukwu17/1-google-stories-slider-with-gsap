@@ -1,9 +1,11 @@
 import './app.scss';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 // import { gsap } from 'gsap';
 
 // import MiddlePhone from '../../components/App/md/MiddlePhone'
 
+// importing of variants for our animation
+import { tVariant, cardsVariant } from './appVariants';
 
 // importing of all assets
 import phone from '../../assets/phone.png'
@@ -17,10 +19,10 @@ const App = () => {
     return (
         <div className="AppMain">
             <div className="AppTitle">
-                <p>Your dream</p>
-                <p>Meet the new iPhone 14 pro</p>
+                <motion.p variants={tVariant} initial="initial" animate="animate">Your dream</motion.p>
+                <motion.p>Meet the new iPhone 14 pro</motion.p>
             </div>
-            <div className="AppMid_1">
+            <motion.div className="AppMid_1">
                 <div className="AppMgo">
                     <div className="AppMOimg"><img src={p1} alt="" /></div>
                 </div>
@@ -34,7 +36,7 @@ const App = () => {
                 <div className="AppMgo">
                     <div className="AppMOimg"><img src={p4} alt="" /></div>
                 </div>
-            </div>
+            </motion.div>
             <div className="">
                 
             </div>
