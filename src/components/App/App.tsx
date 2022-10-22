@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 // import MiddlePhone from '../../components/App/md/MiddlePhone'
 
 // importing of variants for our animation
-import { t1Variant, cardsVariant } from './appVariants';
+import { t1Variant, t2Variant, mainCardsVariant, smallCardsVariant } from './appVariants';
 
 // importing of all assets
 import phone from '../../assets/phone.png'
@@ -20,22 +20,24 @@ const App = () => {
         <div className="AppMain">
             <div className="AppTitle">
                 <motion.p variants={t1Variant} initial="initial" animate="animate">Your dream</motion.p>
-                <motion.p>Meet the new iPhone 14 pro</motion.p>
+                <motion.p variants={t2Variant} initial="initial" animate="animate">Meet the new iPhone 14 pro</motion.p>
             </div>
-            <motion.div className="AppMid_1" variants={cardsVariant} initial="initial" animate="animate">
-                <div className="AppMgo">
+            <motion.div className="AppMid_1" variants={mainCardsVariant} initial="initial" animate="animate">
+                <motion.div className="AppMgo" variants={smallCardsVariant} custom={1}>
                     <div className="AppMOimg"><img src={p1} alt="" /></div>
-                </div>
-                <div className="AppMgo">
+                </motion.div>
+                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={3}>
                     <div className="AppMOimg"><img src={p2} alt="" /></div>
-                </div>
-                <div className='AppMgo boy'><img src={phone} alt="" /></div>
-                <div className="AppMgo">
+                </motion.div>
+                <motion.div className='AppMgo boy'>
+                    <img src={phone} alt="" />
+                </motion.div>
+                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={2}>
                     <div className="AppMOimg"><img src={p3} alt="" /></div>
-                </div>
-                <div className="AppMgo">
+                </motion.div>
+                <motion.div className="AppMgo" variants={smallCardsVariant} custom={0}>
                     <div className="AppMOimg"><img src={p4} alt="" /></div>
-                </div>
+                </motion.div>
             </motion.div>
             <div className="">
                 
