@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 // import MiddlePhone from '../../components/App/md/MiddlePhone'
 
 // importing of variants for our animation
-import { tVariant, cardsVariant } from './appVariants';
+import { t1Variant, cardsVariant } from './appVariants';
 
 // importing of all assets
 import phone from '../../assets/phone.png'
@@ -19,10 +19,10 @@ const App = () => {
     return (
         <div className="AppMain">
             <div className="AppTitle">
-                <motion.p variants={tVariant} initial="initial" animate="animate">Your dream</motion.p>
+                <motion.p variants={t1Variant} initial="initial" animate="animate">Your dream</motion.p>
                 <motion.p>Meet the new iPhone 14 pro</motion.p>
             </div>
-            <motion.div className="AppMid_1">
+            <motion.div className="AppMid_1" variants={cardsVariant} initial="initial" animate="animate">
                 <div className="AppMgo">
                     <div className="AppMOimg"><img src={p1} alt="" /></div>
                 </div>
