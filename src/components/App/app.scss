@@ -76,4 +76,15 @@
             }
         }
     }
+
+    .midCvr {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 800px;
+        font-size: 100px;
+
+        > div {
+            width: 45%;
+        }
+    }
 }

@@ -1,6 +1,8 @@
-import './app.scss';
+import { useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { gsap } from 'gsap';
+
+import './app.scss';
 
 // importation of supporting components
 import Phone from './Phone';
@@ -14,7 +16,6 @@ import p1 from '../../assets/p1.png'
 import p2 from '../../assets/p2.png'
 import p3 from '../../assets/p3.png'
 import p4 from '../../assets/p4.png'
-import { useEffect } from 'react';
 
 const App = () => {
     const {scrollY} = useScroll()
@@ -22,12 +23,12 @@ const App = () => {
     const card1X = useTransform(scrollY, [375, 1000, 1375], [0, 0, 250])
     const card1Xb = useTransform(scrollY, [375, 1000, 1375], [0, 0, -250])
 
-    useEffect(() => {
-        gsap.set('body', {overflow:'hidden'})
-        setTimeout(() => {
-            gsap.set('body', {overflow:'auto'})
-        }, 2500)
-    }, [])
+    // useEffect(() => {
+    //     gsap.set('body', {overflow:'hidden'})
+    //     setTimeout(() => {
+    //         gsap.set('body', {overflow:'auto'})
+    //     }, 2500)
+    // }, [])
 
     return (
         <div className="AppMain">
@@ -50,8 +51,23 @@ const App = () => {
                     <div className="AppMOimg"><img src={p4} alt="" /></div>
                 </motion.div>
             </motion.div>
-            <div className="">
-                
+            <div className="midCvr">
+                <div className="">
+                    <div className="AiiCvr">
+                        <div className="Aii_1"></div>
+                        <div className="Aii_2"></div>
+                        <div className="Aii_3"></div>
+                        <div className="Aii_4"></div>
+                    </div>
+                </div>
+                <div className="">
+                    <div className="AiiCvr">
+                        <div className="Aii_1"></div>
+                        <div className="Aii_2"></div>
+                        <div className="Aii_3"></div>
+                        <div className="Aii_4"></div>
+                    </div>
+                </div>
             </div>
         </div>
     )
