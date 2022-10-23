@@ -56,16 +56,16 @@ const App = () => {
                     <div className="AiiCvr">
                         <div className="Aii_1"></div>
                         <div className="Aii_2"></div>
-                        <div className="Aii_3"></div>
-                        <div className="Aii_4"></div>
+                        <div className="Aii_2"></div>
+                        <div className="Aii_1"></div>
                     </div>
                 </div>
                 <div className="">
                     <div className="AiiCvr">
                         <div className="Aii_1"></div>
                         <div className="Aii_2"></div>
-                        <div className="Aii_3"></div>
-                        <div className="Aii_4"></div>
+                        <div className="Aii_2"></div>
+                        <div className="Aii_1"></div>
                     </div>
                 </div>
             </div>
