@@ -74,8 +74,25 @@ const moveBallVariant: Omit<iFirst, 'initial'> = {
 const ballUpAndDown: Omit<iFirst, 'initial'> = {
     animate: (custom: number) => ({
         y: [0, 100, 0],
-        // rotate: [-180, 720, -180],
+        rotate: [0, 1440, 0],
         transition: {
+            delay: custom * 0.5,
+            ease: 'easeInOut',
+            duration: 3,
+            repeat: Infinity,
+        }
+    })
+}
+const ballUpAndSide: Omit<iFirst, 'initial'> = {
+    animate: (custom: number) => ({
+        x: [-100, 100, -100],
+        y: [0, 10, 0],
+        rotate: [-180, 720, -180],
+        transition: {
+            y: {
+                times: [0, .5, 1],
+                repeat: Infinity,
+            },
             delay: custom * 0.5,
             ease: 'easeInOut',
             duration: 3,
@@ -85,5 +102,5 @@ const ballUpAndDown: Omit<iFirst, 'initial'> = {
 }
 
 export {
-    t1Variant, t2Variant, mainCardsVariant, smallCardsVariant, moveBallVariant, ballUpAndDown
+    t1Variant, t2Variant, mainCardsVariant, smallCardsVariant, moveBallVariant, ballUpAndDown, ballUpAndSide
 }

@@ -3,7 +3,7 @@ import {useRef, useEffect} from 'react';
 
 
 // import variant for animation of elements
-import { moveBallVariant, ballUpAndDown } from './appVariants';
+import { moveBallVariant, ballUpAndDown, ballUpAndSide } from './appVariants';
 
 export default function MidBallComp() {
     const cvrRef = useRef<HTMLDivElement>({} as HTMLDivElement)
@@ -26,9 +26,9 @@ export default function MidBallComp() {
             </div>
             <div className="AliMajor">
                 <div className="AiiCvr">
-                    <motion.div className="Aii_1" custom={2} variants={moveBallVariant} animate="animate"></motion.div>
+                    <motion.div className="Aii_1" custom={0} variants={moveBallVariant} animate="animate"></motion.div>
                     <div className="Aii_2"></div>
-                    <motion.div className="Aii_1"></motion.div>
+                    <motion.div className="Aii_1" custom={0} variants={ballUpAndSide} animate="animate"></motion.div>
                 </div>
             </div>
         </div>
