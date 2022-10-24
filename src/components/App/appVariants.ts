@@ -58,10 +58,27 @@ const smallCardsVariant: iFirst = {
 }
 
 // for animations in the MidBallComp
+const motherBallCvr: Omit<iFirst, 'initial'> = {
+    animate: (custom: number) => ({
+        rotate: [-180, 720, -180],
+        transition: {
+            delay: custom * 0.5,
+            ease: 'easeInOut',
+            duration: 13,
+            repeat: Infinity,
+        }
+    })
+}
+const bgChange = [
+    'linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)',
+    'linear-gradient(90deg, #0700b8 0%, #00ff88 100%)',
+    'linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)',
+];
 const moveBallVariant: Omit<iFirst, 'initial'> = {
     animate: (custom: number) => ({
         x: [-100, 100, -100],
         rotate: [-180, 720, -180],
+        background: bgChange,
         transition: {
             delay: custom * 0.5,
             ease: 'easeInOut',
@@ -73,8 +90,9 @@ const moveBallVariant: Omit<iFirst, 'initial'> = {
 
 const ballUpAndDown: Omit<iFirst, 'initial'> = {
     animate: (custom: number) => ({
-        y: [0, 100, 0],
+        y: [0, 70, 0],
         rotate: [0, 1440, 0],
+        background: bgChange,
         transition: {
             delay: custom * 0.5,
             ease: 'easeInOut',
@@ -86,8 +104,9 @@ const ballUpAndDown: Omit<iFirst, 'initial'> = {
 const ballUpAndSide: Omit<iFirst, 'initial'> = {
     animate: (custom: number) => ({
         x: [-100, 100, -100],
-        y: [0, 10, 0],
+        y: [0, 20, 0],
         rotate: [-180, 720, -180],
+        background: bgChange,
         transition: {
             y: {
                 times: [0, .5, 1],
@@ -100,7 +119,19 @@ const ballUpAndSide: Omit<iFirst, 'initial'> = {
         }
     })
 }
+const barSideWays: Omit<iFirst, 'initial'> = {
+    animate: (custom: number) => ({
+        x: [-20, 20, -20],
+        background: bgChange,
+        transition: {
+            delay: custom * 0.5,
+            ease: 'easeInOut',
+            duration: 3,
+            repeat: Infinity,
+        }
+    })
+}
 
 export {
-    t1Variant, t2Variant, mainCardsVariant, smallCardsVariant, moveBallVariant, ballUpAndDown, ballUpAndSide
+    t1Variant, t2Variant, mainCardsVariant, smallCardsVariant, motherBallCvr, moveBallVariant, ballUpAndDown, ballUpAndSide, barSideWays
 }

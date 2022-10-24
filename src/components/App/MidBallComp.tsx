@@ -3,7 +3,7 @@ import {useRef, useEffect} from 'react';
 
 
 // import variant for animation of elements
-import { moveBallVariant, ballUpAndDown, ballUpAndSide } from './appVariants';
+import { motherBallCvr, moveBallVariant, ballUpAndDown, ballUpAndSide, barSideWays } from './appVariants';
 
 export default function MidBallComp() {
     const cvrRef = useRef<HTMLDivElement>({} as HTMLDivElement)
@@ -18,18 +18,18 @@ export default function MidBallComp() {
     return (
         <div className="midCvr">
             <div className="AliMajor">
-                <div className="AiiCvr" ref={cvrRef}>
-                    <motion.div className="Aii_1" custom={0} variants={moveBallVariant} animate="animate"></motion.div>
-                    <div className="Aii_2"></div>
-                    <motion.div className="Aii_1" custom={0} variants={ballUpAndDown} animate="animate"></motion.div>
-                </div>
+                <motion.div className="AiiCvr" ref={cvrRef} custom={0} variants={motherBallCvr} animate="animate">
+                    <motion.div className="Aii_1" custom={0} variants={moveBallVariant}></motion.div>
+                    <motion.div className="Aii_2" custom={0} variants={barSideWays}></motion.div>
+                    <motion.div className="Aii_1" custom={0} variants={ballUpAndDown}></motion.div>
+                </motion.div>
             </div>
             <div className="AliMajor">
-                <div className="AiiCvr">
-                    <motion.div className="Aii_1" custom={0} variants={moveBallVariant} animate="animate"></motion.div>
-                    <div className="Aii_2"></div>
-                    <motion.div className="Aii_1" custom={0} variants={ballUpAndSide} animate="animate"></motion.div>
-                </div>
+                <motion.div className="AiiCvr" custom={0} variants={motherBallCvr} animate="animate">
+                    <motion.div className="Aii_1" custom={2} variants={moveBallVariant}></motion.div>
+                    <motion.div className="Aii_2" custom={2} variants={barSideWays}></motion.div>
+                    <motion.div className="Aii_1" custom={0} variants={ballUpAndSide}></motion.div>
+                </motion.div>
             </div>
         </div>
     )
