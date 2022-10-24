@@ -24,6 +24,7 @@ const App = () => {
     const card1Y = useTransform(scrollY, [375, 1375], [0, 1000])
     const card1X = useTransform(scrollY, [375, 1000, 1375], [0, 0, 250])
     const card1Xb = useTransform(scrollY, [375, 1000, 1375], [0, 0, -250])
+    const background = useTransform(scrollY, [900, 1275], ['#000', '#f5f6fa'])
 
     // useEffect(() => {
     //     gsap.set('body', {overflow:'hidden'})
@@ -33,7 +34,7 @@ const App = () => {
     // }, [])
 
     return (
-        <div className="AppMain">
+        <motion.div className="AppMain" style={{background}}>
             <div className="AppTitle">
                 <motion.p variants={t1Variant} initial="initial" animate="animate">Your dream</motion.p>
                 <motion.p variants={t2Variant} initial="initial" animate="animate">Meet the new iPhone 14 pro</motion.p>
@@ -54,7 +55,7 @@ const App = () => {
                 </motion.div>
             </motion.div>
             <MidBallComp />
-        </div>
+        </motion.div>
     )
 }
 export default App;
