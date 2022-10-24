@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
+// importing of style sheets
 import './app.scss';
 
 // importation of supporting components
 import Phone from './Phone';
+import MidBallComp from './MidBallComp';
 
 
 // importing of framer motion variants for our animation
@@ -51,24 +53,7 @@ const App = () => {
                     <div className="AppMOimg"><img src={p4} alt="" /></div>
                 </motion.div>
             </motion.div>
-            <div className="midCvr">
-                <div className="AliMajor">
-                    <div className="AiiCvr">
-                        <div className="Aii_1"></div>
-                        <div className="Aii_2"></div>
-                        <div className="Aii_2"></div>
-                        <div className="Aii_1"></div>
-                    </div>
-                </div>
-                <div className="AliMajor">
-                    <div className="AiiCvr">
-                        <div className="Aii_1"></div>
-                        <div className="Aii_2"></div>
-                        <div className="Aii_2"></div>
-                        <div className="Aii_1"></div>
-                    </div>
-                </div>
-            </div>
+            <MidBallComp />
         </div>
     )
 }
