@@ -57,6 +57,33 @@ const smallCardsVariant: iFirst = {
     })
 }
 
+// for animations in the MidBallComp
+const moveBallVariant: Omit<iFirst, 'initial'> = {
+    animate: (custom: number) => ({
+        x: [-100, 100, -100],
+        rotate: [-180, 720, -180],
+        transition: {
+            delay: custom * 0.5,
+            ease: 'easeInOut',
+            duration: 3,
+            repeat: Infinity,
+        }
+    })
+}
+
+const ballUpAndDown: Omit<iFirst, 'initial'> = {
+    animate: (custom: number) => ({
+        y: [0, 100, 0],
+        // rotate: [-180, 720, -180],
+        transition: {
+            delay: custom * 0.5,
+            ease: 'easeInOut',
+            duration: 3,
+            repeat: Infinity,
+        }
+    })
+}
+
 export {
-    t1Variant, t2Variant, mainCardsVariant, smallCardsVariant
+    t1Variant, t2Variant, mainCardsVariant, smallCardsVariant, moveBallVariant, ballUpAndDown
 }
