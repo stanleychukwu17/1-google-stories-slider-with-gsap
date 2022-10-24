@@ -52,7 +52,7 @@ const App = () => {
                 </motion.div>
             </motion.div>
             <div className="midCvr">
-                <div className="">
+                <div className="AliMajor">
                     <div className="AiiCvr">
                         <div className="Aii_1"></div>
                         <div className="Aii_2"></div>
@@ -60,7 +60,7 @@ const App = () => {
                         <div className="Aii_1"></div>
                     </div>
                 </div>
-                <div className="">
+                <div className="AliMajor">
                     <div className="AiiCvr">
                         <div className="Aii_1"></div>
                         <div className="Aii_2"></div>

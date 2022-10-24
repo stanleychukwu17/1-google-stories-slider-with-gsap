@@ -80,10 +80,10 @@
     .midCvr {
         display: flex;
         justify-content: space-around;
-        margin-top: 800px;
+        margin-top: 700px;
         font-size: 100px;
 
-        > div {
+        > .AliMajor {
             width: 45%;
         }
 
@@ -96,12 +96,12 @@
                 margin: 11px auto;
             }
             .Aii_1 {
-                width: 60px;
-                height: 60px;
+                width: 55px;
+                height: 55px;
                 border-radius: 100px;
             }
             .Aii_2 {
-                width: 175px;
+                width: 190px;
                 height: 11px;
                 border-radius: 5px;
             }
