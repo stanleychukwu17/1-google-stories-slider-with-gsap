@@ -11,7 +11,7 @@ import MidBallComp from './MidBallComp';
 
 
 // importing of framer motion variants for our animation
-import { t1Variant, t2Variant, mainCardsVariant, smallCardsVariant } from './appVariants';
+import { t1Variant, t2Variant, mainCardsVariant} from './appVariants';
 
 // importing of all assets
 import p1 from '../../assets/p1.png'
