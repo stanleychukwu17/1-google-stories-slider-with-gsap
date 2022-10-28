@@ -26,7 +26,7 @@ const App = () => {
     const card1Y = useTransform(scrollY, [375, 1375], [0, 1000])
     const card1X = useTransform(scrollY, [375, 1000, 1375], [0, 0, 250])
     const card1Xb = useTransform(scrollY, [375, 1000, 1375], [0, 0, -250])
-    const background = useTransform(scrollY, [900, 1275], ['#000', '#f5f6fa']) // changes the background color
+    const background = useTransform(scrollY, [900, 1275], ['#000', '#f5f6fa']) // changes the page background color
 
     // useEffect(() => {
     //     gsap.set('body', {overflow:'hidden'})
@@ -44,17 +44,17 @@ const App = () => {
                 <motion.p variants={t2Variant} initial="initial" animate="animate">Meet the new iPhone 14 pro</motion.p>
             </div>
             <motion.div className="AppMid_1" variants={mainCardsVariant} initial="initial" animate="animate">
-                <motion.div className="AppMgo" variants={smallCardsVariant} custom={2} style={{y:card1Y, x:card1X}}>
+                <motion.div className="AppMgo" custom={2} style={{y:card1Y, x:card1X}}>
                     <div className="AppMOimg"><img src={p1} alt="" /></div>
                 </motion.div>
-                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={4}>
+                <motion.div className="AppMgo Mg2" custom={4}>
                     <div className="AppMOimg"><img src={p2} alt="" /></div>
                 </motion.div>
                 <Phone />
-                <motion.div className="AppMgo Mg2" variants={smallCardsVariant} custom={3}>
+                <motion.div className="AppMgo Mg2" custom={3}>
                     <div className="AppMOimg"><img src={p3} alt="" /></div>
                 </motion.div>
-                <motion.div className="AppMgo" variants={smallCardsVariant} custom={5} style={{y:card1Y, x:card1Xb}}>
+                <motion.div className="AppMgo" custom={5} style={{y:card1Y, x:card1Xb}}>
                     <div className="AppMOimg"><img src={p4} alt="" /></div>
                 </motion.div>
             </motion.div>
