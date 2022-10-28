@@ -1,4 +1,4 @@
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 // import { gsap } from 'gsap';
 
@@ -28,12 +28,11 @@ const App = () => {
     const card1Xb = useTransform(scrollY, [375, 1000, 1375], [0, 0, -250])
     const background = useTransform(scrollY, [900, 1275], ['#000', '#f5f6fa']) // changes the page background color
 
-    // useEffect(() => {
-    //     gsap.set('body', {overflow:'hidden'})
-    //     setTimeout(() => {
-    //         gsap.set('body', {overflow:'auto'})
-    //     }, 2500)
-    // }, [])
+    // for hero section card animations
+
+    useEffect(() => {
+        // gsap.set('body', {overflow:'hidden'})
+    }, [])
 
     return (
         <motion.div className="AppMain" style={{background}}>
