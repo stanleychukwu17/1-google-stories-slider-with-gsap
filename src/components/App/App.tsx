@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useAnimationControls } from 'framer-motion';
 // import { gsap } from 'gsap';
 
 // importing of style sheets
@@ -29,9 +29,30 @@ const App = () => {
     const background = useTransform(scrollY, [900, 1275], ['#000', '#f5f6fa']) // changes the page background color
 
     // for hero section card animations
+    const cardControls = useAnimationControls()
 
     useEffect(() => {
-        // gsap.set('body', {overflow:'hidden'})
+        cardControls.set({opacity:0, y:70});
+        cardControls.start( custom => ({
+            opacity: 1, y: 0,
+            transition: {
+                opacity: {duration:1, ease:'easeIn', delay: .3 * custom},
+                duration:1, ease: 'easeOut', delay: .3 * custom
+            }
+        }))
+
+        // stop the cardControl animations once the scrolling has passed the section where the iPhone is pinned to the user interface
+        const unSubscribe = scrollY.onChange(latest => {
+            if (latest > 375) {
+                console.log({latest})
+                console.log('kill the animation')
+                unSubscribe()
+            }
+        })
+
+        return () => {
+            unSubscribe()
+        }
     }, [])
 
     return (
@@ -43,17 +64,17 @@ const App = () => {
                 <motion.p variants={t2Variant} initial="initial" animate="animate">Meet the new iPhone 14 pro</motion.p>
             </div>
             <motion.div className="AppMid_1" variants={mainCardsVariant} initial="initial" animate="animate">
-                <motion.div className="AppMgo" custom={2} style={{y:card1Y, x:card1X}}>
+                <motion.div className="AppMgo" animate={cardControls} custom={4} style={{y:card1Y, x:card1X}}>
                     <div className="AppMOimg"><img src={p1} alt="" /></div>
                 </motion.div>
-                <motion.div className="AppMgo Mg2" custom={4}>
+                <motion.div className="AppMgo Mg2" animate={cardControls} custom={4}>
                     <div className="AppMOimg"><img src={p2} alt="" /></div>
                 </motion.div>
                 <Phone />
-                <motion.div className="AppMgo Mg2" custom={3}>
+                <motion.div className="AppMgo Mg2" animate={cardControls} custom={3}>
                     <div className="AppMOimg"><img src={p3} alt="" /></div>
                 </motion.div>
-                <motion.div className="AppMgo" custom={5} style={{y:card1Y, x:card1Xb}}>
+                <motion.div className="AppMgo" animate={cardControls} custom={5} style={{y:card1Y, x:card1Xb}}>
                     <div className="AppMOimg"><img src={p4} alt="" /></div>
                 </motion.div>
             </motion.div>

@@ -11,7 +11,7 @@ export default function MidBallComp() {
 
     useEffect(() => {
         // console.log(cvrRef.current)
-        console.log(inView)
+        // console.log(inView)
     }, [inView])
     
 

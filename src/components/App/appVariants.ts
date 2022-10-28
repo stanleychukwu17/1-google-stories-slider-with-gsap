@@ -33,11 +33,9 @@ const t2Variant: iFirst = {
 }
 
 const mainCardsVariant: iFirst = {
-    initial: {
-        opacity: 0, y: 50
-    },
+    initial: {y: 50},
     animate: {
-        opacity: 1, y: 0,
+        y: 0,
         transition: {
             duration:.8,
             delay: .1
