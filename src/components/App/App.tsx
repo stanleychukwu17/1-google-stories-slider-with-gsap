@@ -44,9 +44,9 @@ const App = () => {
         // stop the cardControl animations once the scrolling has passed the section where the iPhone is pinned to the user interface
         const unSubscribe = scrollY.onChange(latest => {
             if (latest > 375) {
-                console.log({latest})
-                console.log('kill the animation')
                 unSubscribe()
+                cardControls.stop()
+                cardControls.set({opacity: 1, y: 0})
             }
         })
 
