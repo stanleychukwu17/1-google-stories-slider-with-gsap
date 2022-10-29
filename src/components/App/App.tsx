@@ -26,6 +26,8 @@ const App = () => {
     const card1Y = useTransform(scrollY, [375, 1375], [0, 1000])
     const card1X = useTransform(scrollY, [375, 1000, 1375], [0, 0, 250])
     const card1Xb = useTransform(scrollY, [375, 1000, 1375], [0, 0, -250])
+    const card2Y = useTransform(scrollY, [175, 1000], [0, 200])
+    const card3Y = useTransform(scrollY, [175, 1000], [0, -200])
     const background = useTransform(scrollY, [900, 1275], ['#000', '#f5f6fa']) // changes the page background color
 
     // for hero section card animations
@@ -67,11 +69,11 @@ const App = () => {
                 <motion.div className="AppMgo" animate={cardControls} custom={4} style={{y:card1Y, x:card1X}}>
                     <div className="AppMOimg"><img src={p1} alt="" /></div>
                 </motion.div>
-                <motion.div className="AppMgo Mg2" animate={cardControls} custom={4}>
+                <motion.div className="AppMgo Mg2" animate={cardControls} custom={4} style={{y:card2Y}}>
                     <div className="AppMOimg"><img src={p2} alt="" /></div>
                 </motion.div>
                 <Phone />
-                <motion.div className="AppMgo Mg2" animate={cardControls} custom={3}>
+                <motion.div className="AppMgo Mg2" animate={cardControls} custom={3} style={{y:card3Y}}>
                     <div className="AppMOimg"><img src={p3} alt="" /></div>
                 </motion.div>
                 <motion.div className="AppMgo" animate={cardControls} custom={5} style={{y:card1Y, x:card1Xb}}>
